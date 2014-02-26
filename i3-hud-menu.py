@@ -46,6 +46,7 @@ def try_appmenu_interface(window_id):
     else:
       new_label_list = label_list
 
+    # FIXME: This is not excluding all unactivable menuitems.
     if len(item_children) == 0:
       dbusmenu_item_dict[format_label_list(new_label_list)] = item_id
     else:
