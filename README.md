@@ -18,6 +18,21 @@ i3-hud-menu.py
 ==============
 Try to get the menu of the currently focused X11 window, list possible actions and ask the used which one to run.
 
+Add to .profile : 
+
+    if [ -n "$GTK_MODULES" ]
+    then
+      GTK_MODULES="$GTK_MODULES:unity-gtk-module"
+    else
+      GTK_MODULES="unity-gtk-module"
+    fi
+    
+    if [ -z "$UBUNTU_MENUPROXY" ]
+    then
+      UBUNTU_MENUPROXY=1
+    fi
+
+
 
 i3-wm config
 ============
